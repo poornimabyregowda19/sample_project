@@ -57,4 +57,4 @@ run following commands to start and enable service in systemctl <br/>
 check logs in <br/>
 `sudo journalctl -u gunicorn`
 
-after starting gunicorn to 0.0.0.0:8002/data it displays the setting envionment presently used based on .evn.system file
+after starting gunicorn to 0.0.0.0:8002/data it displays the setting envionment presently used based on .env.system file
