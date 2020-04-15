@@ -18,11 +18,11 @@ and run on gunicorn
 
 ##### manage.py and wsgi file. add following configuration
 ```
- if os.getenv("SIMPLE_SETTINGS") and not os.getenv("SIMPLE_SETTINGS") in ["cmms.settings.development",
-                                                                         "cmms.settings.production"]:
-        os.environ.setdefault("SIMPLE_SETTINGS", "cmms.settings.development")
+ if os.getenv("SIMPLE_SETTINGS") and not os.getenv("SIMPLE_SETTINGS") in ["<project-name>.settings.development",
+                                                                         "<project-name>.settings.production"]:
+        os.environ.setdefault("SIMPLE_SETTINGS", "project-name>.settings.development")
     else:
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cmms.settings.development")
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "<project-name>.settings.development")
 ```
 
 ###### we need to set 'SIMPLE_SETTINGS' in os.envion externally. create .env.system in settings foldere
