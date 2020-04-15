@@ -43,8 +43,9 @@ After=network.target
 User=poornima
 Group=www-data
 WorkingDirectory=/home/poornima/PycharmProjects/cmms
-EnvironmentFile=/home/poornima/PycharmProjects/cmms/cmms/.env.system
-ExecStart=/home/poornima/PycharmProjects/cmms/venv/bin/gunicorn --access-logfile - --workers 10 --bind unix:/home/poornima/PycharmProjects/cmms/cmms.sock cmms.wsgi:application
+EnvironmentFile=/home/poornima/PycharmProjects/cmms/cmms/settings/.env.system
+ExecStart= /home/poornima/PycharmProjects/cmms/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8002 cmms.wsgi
+
 
 [Install]
 WantedBy=multi-user.target
