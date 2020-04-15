@@ -13,10 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import environ
 
-from dotenv import load_dotenv
 import os
 
-load_dotenv(".env.prod")
 
 env = environ.Env(
 # set casting, default value
